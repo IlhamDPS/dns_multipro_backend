@@ -1,0 +1,11 @@
+.idea/
+node_modules/
+coverage/
+**/*.js
+!knexfile.js
+!ecosystem.config.js
+!test/**/*.js
+!seeds/**/*.js
+!migrations/**/*.js
+.env
+logs/*
