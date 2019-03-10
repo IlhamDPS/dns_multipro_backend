@@ -1,6 +1,5 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
-import * as fs from 'fs-extra-promise';
 import {appConfig} from '../config/app';
 import app from './app';
 import {errorHandler, isExpectedError} from './helper/error_handler';
