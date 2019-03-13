@@ -1,3 +1,4 @@
+// @ts-ignore
 import * as Validator from 'fastest-validator';
 import {appConfig} from '../../config/app';
 import {ApplicationError} from '../helper/error_handler';

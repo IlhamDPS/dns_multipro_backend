@@ -51,6 +51,10 @@ const levelFn = (status) => {
 
 };
 
+const httpLog = log.child({
+    type: 'http'
+});
+
 export function attachLogger(app) {
     app.use((ctx, next) => {
         const startTime = new Date().getTime();
@@ -70,7 +74,7 @@ export function attachLogger(app) {
 
             const level = levelFn.call(ctx, ctx.status, err);
 
-            ctx.log[level]({
+            httpLog[level]({
                 method: ctx.request.method,
                 path: ctx.path,
                 status: ctx.status,

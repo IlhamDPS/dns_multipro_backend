@@ -6,7 +6,7 @@
   "scripts": {
     "test-cov": "LOG=no jest --coverage --runInBand --forceExit --detectOpenHandles",
     "watch": "nodemon . | pino-pretty",
-    "start": "node . | pino-elasticsearch -i farsir_logs",
+    "start": "node . | pino-elasticsearch -i backend_node --host http://elastic.asacreative.com",
     "build": "tsc --build tsconfig.json",
     "build:watch": "tsc --build -w tsconfig.json",
     "test": "jest --coverage --runInBand --forceExit --detectOpenHandles",
@@ -21,6 +21,7 @@
     "fastest-validator": "^0.6.16",
     "fs-extra": "^7.0.1",
     "knex": "^0.16.3",
+    "koa": "^2.7.0",
     "koa-body": "^4.1.0",
     "koa-jwt": "^3.5.1",
     "koa-router": "^7.4.0",
@@ -30,6 +31,8 @@
     "on-finished": "^2.3.0",
     "pg": "^7.8.2",
     "pino": "^5.11.1",
+    "pino-elasticsearch": "^3.1.0",
+    "pino-pretty": "^2.5.0",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
