@@ -3,6 +3,7 @@ import * as Validator from 'fastest-validator';
 import {appConfig} from '../../config/app';
 import {ApplicationError} from '../helper/error_handler';
 
+// @ts-ignore
 const v = new Validator({
     messages: appConfig.validation_message
 });

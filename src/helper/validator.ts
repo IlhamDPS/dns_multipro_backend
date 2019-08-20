@@ -27,6 +27,7 @@ export const validate = (config: IValidatorConfig, body: any) => {
         }, {});
     }
 
+    // @ts-ignore
     const v = new Validator(config.config);
     const result = v.compile(schema)(body);
 
