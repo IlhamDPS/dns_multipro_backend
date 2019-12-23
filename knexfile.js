@@ -6,7 +6,6 @@ module.exports = {
     development: {
         client: process.env.DB_CLIENT,
         connection: {
-            timezone: 'UTC',
             host: process.env.DB_HOST,
             database: process.env.DB_NAME,
             user:     process.env.DB_USERNAME,
@@ -20,7 +19,6 @@ module.exports = {
     test: {
         client: process.env.DB_CLIENT,
         connection: {
-            timezone: 'UTC',
             host: process.env.DB_HOST,
             database: process.env.DB_NAME,
             user:     process.env.DB_USERNAME,
@@ -35,7 +33,6 @@ module.exports = {
     staging: {
         client: 'postgresql',
         connection: {
-            timezone: 'UTC',
             database: 'my_db',
             user:     'username',
             password: 'password'
@@ -52,7 +49,6 @@ module.exports = {
     production: {
         client: process.env.DB_CLIENT,
         connection: {
-            timezone: 'UTC',
             host: process.env.DB_HOST,
             database: process.env.DB_NAME,
             user:     process.env.DB_USERNAME,
