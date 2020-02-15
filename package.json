@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@knax/objection-soft-delete": "^1.0.8",
     "@koa/cors": "^3.0.0",
     "dotenv": "^8.2.0",
     "fastest-validator": "^1.0.0",
@@ -53,8 +54,5 @@
       "!src/modules/index.js"
     ],
     "testEnvironment": "node"
-  },
-  "engines": {
-    "node": "11.11.0"
   }
 }
