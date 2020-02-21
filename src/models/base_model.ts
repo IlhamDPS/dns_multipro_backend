@@ -2,7 +2,7 @@ import * as Knex from 'knex';
 import {DateTime} from 'luxon';
 import {Model} from 'objection';
 import * as uuid from 'uuid';
-import * as softDelete from 'objection-soft-delete';
+import * as softDelete from '@knax/objection-soft-delete';
 
 let extendedModel = softDelete({
     columnName: 'deleted_at',
@@ -21,8 +21,6 @@ export default class BaseModel extends extendedModel {
     public created_at: string;
     public updated_at: string;
     public deleted_at: string;
-
-    public version: number;
 
     public $beforeInsert() {
         this.id = this.id || uuid.v4();
