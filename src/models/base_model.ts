@@ -4,18 +4,19 @@ import {Model} from 'objection';
 import * as uuid from 'uuid';
 import * as softDelete from '@knax/objection-soft-delete';
 
-let extendedModel = softDelete({
-    columnName: 'deleted_at',
-    deletedValue: () => DateTime.local().toISO(),
-    notDeletedValue: null
-})(Model);
-
+// let extendedModel = softDelete({
+//     columnName: 'deleted_at',
+//     deletedValue: () => DateTime.local().toISO(),
+//     notDeletedValue: null
+// })(Model);
+//
 // tslint:disable:no-var-requires
 const knex = Knex(require('../../knexfile')[process.env.NODE_ENV || 'development']);
+//
+// extendedModel.knex(knex);
+Model.knex(knex);
 
-extendedModel.knex(knex);
-
-export default class BaseModel extends extendedModel {
+export default class BaseModel extends Model {
     public id: string;
     // tslint:disable:variable-name
     public created_at: string;
