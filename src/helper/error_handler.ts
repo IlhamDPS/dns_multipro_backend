@@ -7,7 +7,8 @@ const errorTypeHttpCode = {
     BodyValidationError: 400,
     InvalidRequest: 400,
     InvalidVerificationCode: 400,
-    AuthenticationError: 401
+    AuthenticationError: 401,
+    InternalError: 500,
 };
 
 export const ERROR_CODE  = {
@@ -16,6 +17,7 @@ export const ERROR_CODE  = {
     BodyValidationError: 'BodyValidationError',
     InvalidRequest: 'InvalidRequest',
     InvalidVerificationCode: 'InvalidVerificationCode',
+    InternalError: 'InternalError',
     AuthenticationError: 'AuthenticationError',
 };
 
