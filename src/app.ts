@@ -5,7 +5,6 @@ import * as path from 'path';
 import {ApplicationError, errorHandler, isExpectedError} from './helper/error_handler';
 import {attachLogger} from './helper/logger';
 import initializeModules from './modules';
-import initializeScheduler from "./scheduler";
 
 const app = new Koa();
 const router = new Router();
@@ -51,7 +50,6 @@ app.use(async (ctx, next) => {
 
 app.use(cors());
 initializeModules(router);
-initializeScheduler();
 attachLogger(app);
 app.use(router.routes());
 app.use(router.allowedMethods());
